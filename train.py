@@ -2,6 +2,7 @@ import json
 import pandas as pd
 import numpy as np
 from nltk_utils import preprocess
+from numpy.linalg import norm
 
 # open and read the data from the intents.json
 with open('intents.json', 'r', encoding="utf-8") as file:
@@ -93,6 +94,16 @@ tf_a = tf(word_count_a, doc_a)
 # calculating TF-IDF for each element
 tf_idf_a = tf_idf(tf_a, idfs)
 
-# retun score
+# return score
 document_tdidf = pd.DataFrame([tf_idf_a])
 document_tdidf.T
+
+
+# Implementation of consine-similarities function
+# custom cosine similarity function
+def cosine_similarity_custom(vec1, vec2):
+    norm_a = np.linalg.norm(vec1)
+    norm_b = np.linalg.norm(vec2)
+    if norm_a == 0 or norm_b == 0:
+        return 0.0
+    return np.dot(vec1, vec2) / (norm_a * norm_b)
