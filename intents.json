@@ -15,7 +15,7 @@
     {
       "tag": "creator",
       "patterns": ["Who created you?", "Who is your developer?", "Who made you?"],
-      "responses": ["I was created by Roshan Sinha."],
+      "responses": ["I was created by David Bista."],
       "context_set": ""
     },
     {
