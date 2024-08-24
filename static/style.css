@@ -68,6 +68,20 @@ body {
     background: orange;
 }
 
+.chatbox__shortInfo {
+  padding: 0px 20px;
+}
+
+.chatbox__infoMessage {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 10px;
+    background: #E0E0E0;
+    padding: 8px 12px;
+    max-width: 70%
+}
+
 /* MESSAGES */
 .chatbox__messages {
     margin-top: auto;
