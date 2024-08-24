@@ -138,6 +138,12 @@ body {
     color: white;
 }
 
+.chatbox__content--header {
+   display: flex;
+   flex-direction: column;
+   row-gap: 4px;
+}
+
 /* Messages */
 .chatbox__messages {
     padding: 0 20px;
