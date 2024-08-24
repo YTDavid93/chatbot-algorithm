@@ -60,7 +60,7 @@ class TFIDFVectorizer:
     def calculate_idf(self, documents):
         """Calculates Inverse Document Frequency (IDF) for the corpus."""
         N = len(documents)  # Total number of documents
-        idf_dict = dict.fromkeys(total_corpus, 0)
+        idf_dict = dict.fromkeys(self.total_corpus, 0)
 
         for document in documents:
             # Iterate over words in the document, assuming 'document' is a string
@@ -107,7 +107,7 @@ class TFIDFVectorizer:
         print("processed_text:", processed_text)
 
         # Calculate word count for the input text
-        input_word_count = dict.fromkeys(total_corpus, 0)
+        input_word_count = dict.fromkeys(self.total_corpus, 0)
         for word in processed_text.split():
             if word in input_word_count:
                 input_word_count[word] += 1
@@ -133,9 +133,3 @@ class TFIDFVectorizer:
         else:
             return "I can't answer this question"
 
-
-vectorizer = TFIDFVectorizer()
-total_corpus, doc_a = vectorizer.build_corpus(patterns)
-vectorizer.calculate_idf(doc_a)
-vectorizer.precompute_document_vectors()
-print(vectorizer.get_response('students interactions?'))
