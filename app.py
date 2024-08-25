@@ -26,7 +26,6 @@ vectorizer.answers = answers
 total_corpus, doc_a = vectorizer.build_corpus(patternList)
 vectorizer.calculate_idf(doc_a)
 vectorizer.precompute_document_vectors()
-vectorizer.precompute_document_vectors()
 
 @app.route("/")
 def index():
