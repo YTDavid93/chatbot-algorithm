@@ -19,6 +19,25 @@ body {
     --primary: #581B98;
 }
 
+.navbar {
+   padding: 24px;
+}
+
+.navbar__main {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.navbar__main img{
+    width: 50px;
+}
+
+.navbar__main h1 {
+   font-size: 24px;
+   font-weight: bold;
+}
+
 /* CHATBOX
 =============== */
 .chatbox {
