@@ -33,7 +33,7 @@ def index():
 
 @app.post("/predict")
 def predict():
-    text = request.get_json().get("message")
+    text = request.get_json().get("question")
     # Check if JSON is valid
     response = vectorizer.get_response(text)
     message = {"answer": response}
