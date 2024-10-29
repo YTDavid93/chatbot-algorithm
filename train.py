@@ -102,6 +102,8 @@ class TFIDFVectorizer:
             self.document_vectors.append(vector)
 
     def get_response(self, text):
+        if not text:
+            return  "Invalid Input"
         """Generates a response based on the input text."""
         processed_text = preprocess(text)
         print("processed_text:", processed_text)
